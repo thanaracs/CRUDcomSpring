@@ -1,0 +1,18 @@
+#content{
+    color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 240px;
+    background-color: #050023;
+    padding: 6px 14px;
+    line-height: 1.5;
+}
+a:link {text-decoration: none; color: #FFF; }
+a:link,a:active {color: #000000;}
+#menu{
+    font-size: 18px;
+
+}
+

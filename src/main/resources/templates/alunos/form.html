@@ -3,17 +3,47 @@
     <title>TODO supply a title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'/>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+
+        .container{
+
+            justify-content: center;
+            align-items: center;
+            position: center;
+            width: 600px;
+            height: 500px;
+
+        }
+    </style>
 </head>
+
 <body>
+<div class="container">
+    <a href="/../home">Home</a>
 
-<a href="/../home">Home</a>
-<h1>Formulario de alunos</h1>
-<form th:action="${(aluno.nome == null) && (aluno.matricula == null)} ? @{/alunos/save} : @{/alunos/update}" th:object="${aluno}" method="post">
-    <input type="hidden" th:field="*{id}">
-    <input type="text" th:field="*{nome}"  placeholder="Nome">
-    <input type="text" th:field="*{matricula}"  placeholder="Matricula (ex:1234)">
-    <input type="submit" value="Enviar">
-</form>
+    <h3 class="home flow-text">Cadastrar Aluno(a)</h3>
 
+    <form th:action="${(aluno.nome == null) && (aluno.matricula == null)} ? @{/alunos/save} : @{/alunos/update}" th:object="${aluno}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <input type="text" th:field="*{nome}"  placeholder="Nome">
+        <input type="text" th:field="*{matricula}"  placeholder="Matricula (ex:1234)">
+
+        <button class="btn waves-effect waves-light" type="submit" value="Enviar">Cadastrar
+            <i class="material-icons right">done</i>
+        </button>
+        <a href="/../home" class="waves-effect waves-light btn red"><i class="material-icons right">cloud</i>Cancelar</a>
+
+
+    </form>
+</div>
 </body>
 </html>
